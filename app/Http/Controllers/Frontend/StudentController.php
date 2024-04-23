@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Frontend\Student;
+use Yajra\DataTables\Facades\DataTables;
 
 class StudentController extends Controller
 {
@@ -15,7 +16,18 @@ class StudentController extends Controller
     {
         $allStudent = Student::orderBy('name', 'asc')->get();
         // database data get results goes to compact function
-        return view('frontend.students.manage', compact('allStudent')); 
+        
+        return DataTables::of($allStudent)
+          ->addColumn('action', function($row){
+              $actions = '<a href="#" class="btn btn-primary" data-id="' . $row->id . '" data-bs-toggle="modal" data-bs-target="#editStudent">Update</a>
+             <button class="btn btn-danger" data-id="' . $row->id . '" id="delete">Delete</button>';
+
+             return $actions;
+          })
+          ->rawColumns(['action'])
+          ->make(true);
+
+        return view('frontend.students.manage'); 
     }
 
     /**

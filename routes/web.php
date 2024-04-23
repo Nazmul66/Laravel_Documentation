@@ -36,9 +36,9 @@ Route::get('/contact/{id}', function(string $id){
 // students
 route::group(['prefix' => '/student'], function () {
    route::get('/manage', [StudentController::class, 'manage'])->name('student.manage');
-   route::get('/create', [StudentController::class, 'create'])->name('student.create');
-   route::post('/store', [StudentController::class, 'store'])->name('student.store');
-   route::get('/edit/{id}', [StudentController::class, 'edit'])->name('student.edit');
-   route::post('/update/{id}', [StudentController::class, 'update'])->name('student.update');
-   route::get('/delete/{id}', [StudentController::class, 'destroy'])->name('student.delete');
+   // route::get('/create', [StudentController::class, 'create'])->name('student.create');
+   // route::post('/store', [StudentController::class, 'store'])->name('student.store');
+   // route::get('/edit/{id}', [StudentController::class, 'edit'])->name('student.edit');
+   // route::post('/update/{id}', [StudentController::class, 'update'])->name('student.update');
+   // route::get('/delete/{id}', [StudentController::class, 'destroy'])->name('student.delete');
 });
