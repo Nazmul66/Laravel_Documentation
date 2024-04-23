@@ -14,20 +14,9 @@ class StudentController extends Controller
      */
     public function manage()
     {
-        $allStudent = Student::orderBy('name', 'asc')->get();
+        $students = Student::orderBy('name', 'asc')->get();
         // database data get results goes to compact function
-        
-        return DataTables::of($allStudent)
-          ->addColumn('action', function($row){
-              $actions = '<a href="#" class="btn btn-primary" data-id="' . $row->id . '" data-bs-toggle="modal" data-bs-target="#editStudent">Update</a>
-             <button class="btn btn-danger" data-id="' . $row->id . '" id="delete">Delete</button>';
-
-             return $actions;
-          })
-          ->rawColumns(['action'])
-          ->make(true);
-
-        return view('frontend.students.manage'); 
+        return view('frontend.students.manage', compact('students')); 
     }
 
     /**
@@ -43,24 +32,18 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->post('name');
-        $email = $request->post('email');
+        // $name = $request->post('name');
+        // $email = $request->post('email');
 
         $student = new Student();
-        $student->name = $name;
-        $student->email = $email;
+        $student->name = $request->post('name');
+        $student->email = $request->post('email');
         $student->save();
-        return redirect()->route('student.manage');
+        // return redirect()->route('student.manage');
+
+        return response()->json(['status' => 'success']);
 
         // dd($student);  // echo for form data it's built-In for database
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
     }
 
     /**
@@ -83,14 +66,15 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        $student = Student::find($id);
+        $student = Student::find($request->id);
 
         $student->name   = $request->name;
         $student->email  = $request->email;
         $student->save();
-        return redirect()->route('student.manage');
+
+        return response()->json(['status' => 'success']);
     }
 
     /**
@@ -108,5 +92,12 @@ class StudentController extends Controller
             // 404 not found
         }
 
+    }
+
+    public function delete(Request $request)
+    {
+        Student::find($request->student_id)->delete();
+
+        return response()->json(['status' => 'success']);
     }
 }
