@@ -1,7 +1,7 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 
-## Learn About Laravel Artisan Command Line  
+## ##Learn About Laravel Artisan Command Line  
 
 | Command | Description | Links |
 |      :---     |    :---     |     :---:   |
@@ -11,7 +11,7 @@
 | `php artisan route:list --path=(name_add)` |  you can find the routes into the all subRoutes  |  N/A  |
 
 
-## Controller related methods define 
+## ##Controller related methods define 
 
 | Command | Description |
 |      :---     |    :---     | 
@@ -19,7 +19,7 @@
 | `php artisan make:controller (controller name) -r` |  It will create new controller with creating resources inside controller function |
 
 
-## Migration related methods define
+## ##Migration related methods define
 
 | Command | Description |
 |      :---     |    :---   |
@@ -36,7 +36,7 @@
 | `php artisan make:migration update_(name)_table --table=(name)` |  To add new column name use this command |
 
 
-## Seeder related methods define
+## ##Seeder related methods define
 
 | Command | Description | Code |
 |      :---     |    :---   |   :---  |
@@ -46,7 +46,19 @@
 | `php artisan db:seed --class=(seederName)` |  If you want to specify the seeder name insert to the database | 
 
 
-## Routes parameter type define
+## ##Factory related methods define
+
+| Command | Description | Code |
+|      :---     |    :---   |   :---  |
+| `php artisan make:factory TeacherFactory` |  Create new factory file and call the function into `DatabaseSeeder.php` and define the seeder class  |   Teacher::factory()->count(10)->create();  |
+| `php artisan db:seed` |  After creating factories then call the command insert all data into database  | 
+| `php artisan migrate:refresh --seed` |  If you wanted to clear previous data and factories the all data that created |
+| `php artisan db:seed --class=(seederName)` |  If you want to specify the seeder name insert to the database | 
+| `php artisan make:factory TeacherFactory --model=(modelName1)` |  This command can create Factory and model at the same time | 
+| `php artisan make:model Teacher -f` | `same thing`, This command can create Factory and model at the same time | 
+
+
+## ##Routes parameter type define
 
 | Command | Description | Code |
 |      :---     |    :---   |    :---   |   
