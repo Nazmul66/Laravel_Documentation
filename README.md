@@ -25,7 +25,7 @@
 |      :---     |    :---   |
 | `php artisan make:model (model name)` |  you can create new fresh model  |
 | `php artisan make:model (model name) -m` |  It will create new model with creating new migration database files |
-| `php artisan make:migration create_(examples)_table` |  It will create new migration database files and always name should be `plural format` |
+| `php artisan make:migration create_(name)_table` |  It will create new migration database files and always name should be `plural format` |
 | `php artisan migrate` |  It will migrate database file that create into phpMyAdmin  |
 | `php artisan migrate:status` |  This command will show how many database are created  |
 | `php artisan migrate --force` |  This command will do forcefully migrate that database tables that can not be migrated | 
@@ -33,7 +33,17 @@
 | `php artisan migrate:rollback --step=3` |  `--step=3` It's mean that last 3 database table created, It will delete that database table `into phpMyAdmin` |
 | `php artisan migrate:reset` | It will clear or delete all of the database tables `into phpMyAdmin` |
 | `php artisan migrate:refresh / fresh` | It will rollback / delete all database tables then it migrate automatically `into phpMyAdmin` |
+| `php artisan make:migration update_(name)_table --table=(name)` |  To add new column name use this command |
 
+
+## Seeder related methods define
+
+| Command | Description | Code |
+|      :---     |    :---   |   :---  |
+| `php artisan make:seeder DoctorSeeder` |  Create new seeder file and call the function into `DatabaseSeeder.php` and define the seeder class  |  $this->call( [ DoctorSeeder::class ] );  |
+| `php artisan db:seed` |  After creating seeders then the command should to insert the all data into database  | 
+| `php artisan migrate:refresh --seed` |  If you wanted to clear previous data and seeding the all data that created | 
+| `php artisan db:seed --class=(seederName)` |  If you want to specify the seeder name insert to the database | 
 
 
 ## Routes parameter type define
