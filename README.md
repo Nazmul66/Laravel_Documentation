@@ -1,6 +1,15 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 
+## ##Some basic configuration of github
+
+- If you want to git clone the repository just copy the git folder link then open the CMD terminal --> git clone `https://github.com/Nazmul66/Ogani_ecommerce.git`.
+- Then Go to `xampp/php/php.ini` to search `extension.zip` to enable it.
+- then go to terminal to write command `cp .env.example .env` to create env file
+- Then lastly generate the configuration `php artisan key:generate` example below : --->  
+- Do you have any confusion just see this [video Link]('https://www.youtube.com/watch?v=KrsicG8gfVg) 
+
+
 ## ##Learn About Laravel Artisan Command Line  
 
 | Command | Description | Links |
