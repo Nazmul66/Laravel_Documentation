@@ -3,11 +3,12 @@
 
 ## ##Some basic configuration of github
 
-- If you want to git clone the repository just copy the git folder link then open the CMD terminal --> git clone `https://github.com/Nazmul66/Ogani_ecommerce.git`.
-- Then Go to `xampp/php/php.ini` to search `extension.zip` to enable it.
-- then go to terminal to write command `cp .env.example .env` to create env file
-- Then lastly generate the configuration `php artisan key:generate` example below : --->  
-- Do you have any confusion just see this [video Link]('https://www.youtube.com/watch?v=KrsicG8gfVg) 
+| Description |
+|      :---     |
+| If you want to git clone the repository just copy the git folder link then open the CMD terminal --> git clone `https://github.com/Nazmul66/Ogani_ecommerce.git`.  |
+| Then Go to `xampp/php/php.ini` to search `extension.zip` to enable it.  |
+| then go to terminal to write command `cp .env.example .env` to create env file and Then lastly generate the configuration `php artisan key:generate` |
+| Do you have any confusion just see this [video Link]('https://www.youtube.com/watch?v=KrsicG8gfVg)   |
 
 
 ## ##Learn About Laravel Artisan Command Line  
