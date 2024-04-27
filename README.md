@@ -80,4 +80,35 @@
 | `whereNumber('id')->whereAlpha('id')` | *For multiple type define*  | Route::get('/contact/{id}', function(string $id){ return "hello $id"; })->whereNumber('id')->whereAlpha('id');  |
 
 
+## ##Php & laravel All query builders
+| Query |  Code  |
+|      :---     |     :---   | 
+| `DB::table('students')` |   $students = DB::table('students')->select('name', 'email')->get();  | 
+| `orderBy('name', 'asc')` |  $students = Student::orderBy('name', 'asc')->get();  | 
+| `latest()` |   $students = Student::latest()->get();  | 
+| `oldest()` |   $students = Student::oldest()->get();  | 
+| `inRandomOrder()` |   $students = Student::inRandomOrder()->get();  | 
+| `where('id', '=', 1)` |  $students = Student::where('id', '=', 1)->Where('age', '>', 18)->get();  | 
+| `orWhere('id', '=', 1)` |  $students = Student::where('id', '=', 1)->orWhere('age', '>', 18)->get();  | 
+| `skip(2)->limit(2)` | $students = Student::skip(2)->limit(2)->get(); | 
+| `skip(2)->take(2)` | $students = Student::skip(2)->take(2)->get(); | 
+| `count()` | $students = Student::count(); | 
+| `max('age')` | $students = Student::max('age'); | 
+| `sum('salary')` | $students = Student::sum('salary'); | 
+| `whereBetween('id', [2,4])` | $students = Student::whereBetween('id', [2,4])->get() | 
+| `whereNotBetween('id', [2,4])` | $students = Student::whereNotBetween('id', [2,4])->get() | 
+| `whereIn('id', [2,5,7,8])` | $students = Student::whereIn('id', [2,5,7,8])->get(); | 
+| `whereNotIn('id', [2,5,7,8])` | $students = Student::whereNotIn('id', [2,5,7,8])->get(); | 
+| `whereNull('name')` | $students = Student::whereNull('name')->get(); | 
+| `whereNotNull('name')` | $students = Student::whereNotNull('name')->get(); | 
+| `whereYear('created_at', '2024')` | $students = Student::whereYear('created_at', '2024')->get(); | 
+| `whereDate('created_at', '2024-04-26')` | $students = Student::whereYear('created_at', '2024')->get(); |
+| `whereMonth('created_at', '6')` | $students = Student::whereMonth('created_at', '6')->get(); |
+| `whereDay('created_at', '27')` | $students = Student::whereDay('created_at', '27')->get(); |
+| `whereTime('created_at', '12:47:13')` | $students = Student::whereTime('created_at', '12:47:13')->get(); |
+| `dd()` | dd($students) |
+| `dump()` | dump($students) |
+
+
+
 
