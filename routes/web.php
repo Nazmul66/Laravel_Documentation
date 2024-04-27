@@ -18,11 +18,11 @@ use App\Http\Controllers\Frontend\StudentController;
 Route::get('/', [PageController::class, 'home'])->name('homePage');
 // Route::get('/about', [PageController::class, 'about'])->name('aboutPage');
 
-Route::view('about','/about');  // another way to create single page specify route 
+Route::view('about','/about');  // another way to create single page specify route
 
 // If you want to not define any parameter, you should do 2 things. Example below: the id should be (id?) and receive the function parameter (id) define null
 // Route::get('/contact/{id?}', function(string $id = null){
-//      return "hello $id";
+//      return "hello $id"; rgersg
 // });
 
 
