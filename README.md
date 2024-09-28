@@ -8,17 +8,20 @@
 | If you want to git clone the repository just copy the git folder link then open the CMD terminal --> git clone `https://github.com/Nazmul66/Ogani_ecommerce.git`.  |
 | Then Go to `xampp/php/php.ini` to search `extension.zip` to enable it.  |
 | then go to terminal to write command `cp .env.example .env` to create env file and Then lastly generate the configuration `php artisan key:generate` |
-| Do you have any confusion just see this [video Link]('https://www.youtube.com/watch?v=KrsicG8gfVg)   |
+| Do you have any confusion just see this [video Link](https://www.youtube.com/watch?v=KrsicG8gfVg)  |
 
 
 ## ##Learn About Laravel Artisan Command Line  
 
 | Command | Description | Links |
 |      :---     |    :---     |     :---:   |
+| `php artisan serve` | it starts a PHP built-in server at a default IP address (127.0.0.1) and port (8000). This server is only for local development purposes. | [N/A](http://127.0.0.1:8000) |
+| `php artisan serve` | You are telling Laravel to start the development server on port 8889 instead of the default port 8000. | http://127.0.0.1:8889 |
 | `php artisan list` | It will show all of the laravel's artisan command list | N/A |
 | `php artisan route:list -h` | When Artisan command run then add to the last `-h`, It will show all options that provide us in every artisan command line |  N/A  |
 | `php artisan route:list --except-vendor` | It's mean it will show the all routes file that i've create and except the vendor routes |  N/A  |
 | `php artisan route:list --path=(name_add)` |  you can find the routes into the all subRoutes  |  N/A  |
+| `php artisan route:list --name=(name_add)` |  you can find the main routes path |  N/A  |
 
 
 ## ##Controller related methods define 
