@@ -15,8 +15,8 @@
 
 | Command | Description | Links |
 |      :---     |    :---     |     :---:   |
-| `php artisan serve` | it starts a PHP built-in server at a default IP address (127.0.0.1) and port (8000). This server is only for local development purposes. | [N/A](http://127.0.0.1:8000) |
-| `php artisan serve` | You are telling Laravel to start the development server on port 8889 instead of the default port 8000. | http://127.0.0.1:8889 |
+| `php artisan serve` | it starts a PHP built-in server at a default IP address (127.0.0.1) and port (8000). This server is only for local development purposes. | http://127.0.0.1:8000 |
+| `php artisan serve --port=8889` | You are telling Laravel to start the development server on port 8889 instead of the default port 8000. | http://127.0.0.1:8889 |
 | `php artisan list` | It will show all of the laravel's artisan command list | N/A |
 | `php artisan route:list -h` | When Artisan command run then add to the last `-h`, It will show all options that provide us in every artisan command line |  N/A  |
 | `php artisan route:list --except-vendor` | It's mean it will show the all routes file that i've create and except the vendor routes |  N/A  |
