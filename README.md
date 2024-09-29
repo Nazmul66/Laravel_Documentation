@@ -45,6 +45,7 @@
 | `php artisan migrate:rollback` |  This command work for last database file migrate that created, It will undo / delete that database table `into phpMyAdmin` |
 | `php artisan migrate:rollback --step=3` |  `--step=3` It's mean that last 3 database table created, It will delete that database table `into phpMyAdmin` |
 | `php artisan migrate:reset` | It will clear or delete all of the database tables `into phpMyAdmin` |
+| `php artisan migrate --path=/database/migrations/selected/` | Is used to run only specific migrations from a particular directory or path, instead of running all migrations in the default database/migrations folder. `into phpMyAdmin` | 
 | `php artisan migrate:refresh / fresh` | It will rollback / delete all database tables then it migrate automatically `into phpMyAdmin` |
 | `php artisan make:migration update_(name)_table --table=(name)` |  To add new column name use this command |
 
